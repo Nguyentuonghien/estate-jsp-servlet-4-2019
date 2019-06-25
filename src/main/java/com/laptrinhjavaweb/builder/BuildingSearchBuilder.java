@@ -1,0 +1,56 @@
+package com.laptrinhjavaweb.builder;
+
+public class BuildingSearchBuilder {
+	
+	private String name;
+	private String ward;                
+	private String street;  
+	
+	public BuildingSearchBuilder(Builder builder) {	
+		this.name = builder.name;
+		this.ward = builder.ward;
+		this.street = builder.street;
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+	public String getWard() {
+		return ward;
+	}
+
+	public String getStreet() {
+		return street;
+	}
+
+	//Inner class:
+	public static class Builder {
+		
+		private String name;
+		private String ward;                
+		private String street;  
+		
+		public Builder setName(String name) {
+			this.name = name;
+			return this;
+		}
+
+		public Builder setWard(String ward) {
+			this.ward = ward;
+			return this;
+		}
+		
+		public Builder setStreet(String street) {
+			this.street = street;
+			return this;
+		}
+
+		//đanh đứng trong class Builder==> this là builder
+		public BuildingSearchBuilder build() {
+			return new BuildingSearchBuilder(this);
+		}
+		
+	}
+	
+}
