@@ -68,6 +68,12 @@ public class BuildingEntity extends BaseEntity{
 	@Column(name = "managerphone")
 	private String managerPhone;  
 	
+	@Column(name = "direction")
+	private String direction;  
+	
+	@Column(name = "level")
+	private String level;
+	
 	@Column(name = "type")
 	private String type;
 
@@ -196,6 +202,18 @@ public class BuildingEntity extends BaseEntity{
 	}
 	public void setType(String type) {
 		this.type = type;
+	}
+	public String getDirection() {
+		return direction;
+	}
+	public void setDirection(String direction) {
+		this.direction = direction;
+	}
+	public String getLevel() {
+		return level;
+	}
+	public void setLevel(String level) {
+		this.level = level;
 	}
 	
 }

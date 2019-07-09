@@ -1,6 +1,6 @@
 package com.laptrinhjavaweb.dto;
 
-public class BuildingDTO extends AbstractDTO{
+public class BuildingDTO extends AbstractDTO<BuildingDTO>{
 
 	private String name;
 	private String ward;                
@@ -23,7 +23,14 @@ public class BuildingDTO extends AbstractDTO{
 	private String managerName;
 	private String managerPhone;
 	private String type;
-	private String[] buildingType = new String[] {};
+	private String level;
+	private String direction;
+	private Integer costRentFrom;
+	private Integer costRentTo;
+	private Integer areaRentFrom;
+	private Integer areaRentTo;
+	
+    private String[] buildingTypes = new String[]{};
 	
 	public String getName() {
 		return name;
@@ -193,12 +200,60 @@ public class BuildingDTO extends AbstractDTO{
 		this.type = type;
 	}
 
-	public String[] getBuildingType() {
-		return buildingType;
+	public String getLevel() {
+		return level;
 	}
 
-	public void setBuildingType(String[] buildingType) {
-		this.buildingType = buildingType;
+	public void setLevel(String level) {
+		this.level = level;
+	}
+
+	public String getDirection() {
+		return direction;
+	}
+
+	public void setDirection(String direction) {
+		this.direction = direction;
+	}
+
+	public Integer getCostRentFrom() {
+		return costRentFrom;
+	}
+
+	public void setCostRentFrom(Integer costRentFrom) {
+		this.costRentFrom = costRentFrom;
+	}
+
+	public Integer getCostRentTo() {
+		return costRentTo;
+	}
+
+	public void setCostRentTo(Integer costRentTo) {
+		this.costRentTo = costRentTo;
+	}
+
+	public Integer getAreaRentFrom() {
+		return areaRentFrom;
+	}
+
+	public void setAreaRentFrom(Integer areaRentFrom) {
+		this.areaRentFrom = areaRentFrom;
+	}
+
+	public Integer getAreaRentTo() {
+		return areaRentTo;
+	}
+
+	public void setAreaRentTo(Integer areaRentTo) {
+		this.areaRentTo = areaRentTo;
+	}
+
+	public String[] getBuildingTypes() {
+		return buildingTypes;
+	}
+
+	public void setBuildingTypes(String[] buildingTypes) {
+		this.buildingTypes = buildingTypes;
 	}
 
 	

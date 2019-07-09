@@ -447,7 +447,8 @@ public class AbstractJDBC<T> implements GenericJDBC<T> {
 			tableName = table.name();
 		}
 
-		StringBuilder result = new StringBuilder("SELECT * FROM "+tableName+" WHERE 1 = 1");
+		//A là tên dùng chung của các table:
+		StringBuilder result = new StringBuilder("SELECT * FROM "+tableName+" A WHERE 1 = 1");
 		if(properties != null && properties.size() > 0) {
 			String[] params = new String[properties.size()];
 			Object[] value = new Object[properties.size()];

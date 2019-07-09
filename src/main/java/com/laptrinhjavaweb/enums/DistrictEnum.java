@@ -4,7 +4,8 @@ public enum DistrictEnum {
 	
 	Quan_1("Quận 1"),
 	Quan_2("Quận 2"),
-	Quan_3("Quận 3");
+	Quan_3("Quận 3"),
+	Quan_4("Quận 4");
 
 	private String value;
 
